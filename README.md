@@ -75,10 +75,5 @@ git clone [https://github.com/lijin6/weeddetectionapp.git](https://github.com/li
 
 ---
 
-
-
 ### 💡 下一步建议
 由于你从 YOLO 转到了 TFLite，你可能需要处理 **元数据（Metadata）** 填充或者 **输入输出张量（Tensor）** 的预处理代码。
-
-**如果你需要我在 Android 端调用 TFLite 推理核心部分的 Java/Kotlin 代码实现，请随时告诉我！**
-
