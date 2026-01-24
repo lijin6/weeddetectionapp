@@ -45,4 +45,4 @@
 
 1. **获取源码**:
    ```bash
-   git clone https://github.com/your-username/weed-detection-app.gi
+   git clone https://github.com/lijin6/weeddetectionapp.git
