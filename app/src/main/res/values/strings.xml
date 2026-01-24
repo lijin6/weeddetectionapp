@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">WeedDetectionApp</string>
+    <string name="start_real_time_detection">Start Real-Time Detection</string> <!-- Add this line -->
+    <string name="model_loading_failed">Model loading failed</string>
+</resources>

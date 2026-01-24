@@ -1,0 +1,58 @@
+[
+  {
+    "type": "Artemisia",
+    "chineseName": "蒿属",
+    "commonName": "艾草、黄花蒿、茵陈蒿等",
+    "feature": "植株通常有强烈香气。茎直立，常有纵棱。叶片多分裂，呈羽状或掌状，背面常密被灰白色绒毛。头状花序小而多。",
+    "imageName": "pic_artemisia"
+  },
+  {
+    "type": "Agropyron",
+    "chineseName": "冰草属",
+    "commonName": "麦麦草、野麦子",
+    "feature": "多年生草本，具根状茎。秆直立，丛生。形似小麦苗，是麦田重要伴生杂草。",
+    "imageName": "pic_agropyron"
+  },
+  {
+    "type": "Chenopodium",
+    "chineseName": "藜属",
+    "commonName": "灰灰菜、白藜",
+    "feature": "茎直立，有棱和绿色或紫红色条纹。叶片呈卵状三角形或菱形，背面常被灰白色粉粒。",
+    "imageName": "pic_chenopodium"
+  },
+  {
+    "type": "Bassia",
+    "chineseName": "地肤属",
+    "commonName": "扫帚菜、绿帚",
+    "feature": "植株后期常呈球形。叶片线形或披针形，互生。幼株绿色，秋季常变红。",
+    "imageName": "pic_bassia"
+  },
+  {
+    "type": "Cirsium",
+    "chineseName": "蓟属",
+    "commonName": "大蓟、刺儿菜",
+    "feature": "茎叶常有锐刺。叶片羽状深裂，裂片边缘有尖刺。头状花序顶生，花多为紫色或红色。",
+    "imageName": "pic_cirsium"
+  },
+  {
+    "type": "Kali",
+    "chineseName": "猪毛菜属",
+    "commonName": "钾猪毛菜",
+    "feature": "一年生草本。茎多分枝，常呈红紫色。叶片肉质，顶端有短尖刺。耐旱耐盐碱。",
+    "imageName": "pic_kali"
+  },
+  {
+    "type": "Raphanus",
+    "chineseName": "萝卜属",
+    "commonName": "野萝卜",
+    "feature": "叶片大头羽状分裂，全株被粗毛。花瓣白色或淡紫色，有深色脉纹。果实为念珠状长角果。",
+    "imageName": "pic_raphanus"
+  },
+  {
+    "type": "Thermopsis",
+    "chineseName": "野决明属",
+    "commonName": "黄华、牧马豆",
+    "feature": "多年生草本。掌状三出复叶，小叶全缘。花冠鲜黄色，蝶形。荚果扁平。",
+    "imageName": "pic_thermopsis"
+  }
+]

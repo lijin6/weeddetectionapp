@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8FAF9">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/top_nav_bar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/nav_pink_green_gradient"
+        android:elevation="4dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/top_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🌿 杂草识别系统"
+            android:textColor="#1B5E20"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <FrameLayout
+        android:id="@+id/main_content_frame"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/top_nav_bar"
+        app:layout_constraintBottom_toTopOf="@id/bottom_navigation">
+
+        <include android:id="@+id/layout_detect_camera" layout="@layout/layout_detect_camera" android:visibility="gone"/>
+        <include android:id="@+id/layout_detect_image" layout="@layout/layout_detect_image" android:visibility="gone"/>
+        <include android:id="@+id/layout_detect_video" layout="@layout/layout_detect_video" android:visibility="gone"/>
+        <include android:id="@+id/layout_capture" layout="@layout/activity_capture" android:visibility="gone"/>
+
+        <ScrollView android:id="@+id/view_info_root" android:layout_width="match_parent" android:layout_height="match_parent" android:visibility="gone" android:fillViewport="true">
+            <LinearLayout android:id="@+id/info_list_container" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp" android:background="#FFFFFF"/>
+        </ScrollView>
+
+        <ScrollView android:id="@+id/view_settings_root" android:layout_width="match_parent" android:layout_height="match_parent" android:visibility="gone" android:fillViewport="true">
+            <LinearLayout android:id="@+id/settings_container" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp" android:background="#FFFFFF"/>
+        </ScrollView>
+
+        <ScrollView
+            android:id="@+id/layout_home"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="15sp"
+                    android:textColor="#90A4AE"
+                    android:layout_marginBottom="20dp"/>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_main_capture"
+                    android:layout_width="match_parent"
+                    android:layout_height="110dp"
+                    android:layout_marginBottom="16dp"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="3dp"
+                    android:foreground="?attr/selectableItemBackground">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:background="@drawable/item_gradient_green"
+                        android:padding="20dp"
+                        android:gravity="center_vertical">
+                        <TextView android:layout_width="60dp" android:layout_height="60dp" android:text="📸" android:textSize="36sp" android:gravity="center" android:background="@drawable/icon_bg_white" />
+                        <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="vertical" android:layout_marginStart="20dp">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="单张拍照识别" android:textSize="18sp" android:textStyle="bold" android:textColor="#1B5E20"/>
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="拍一张照片即可识别" android:textSize="13sp" android:textColor="#668A68"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_main_camera"
+                    android:layout_width="match_parent"
+                    android:layout_height="110dp"
+                    android:layout_marginBottom="16dp"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="3dp"
+                    android:foreground="?attr/selectableItemBackground">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:background="@drawable/item_gradient_blue"
+                        android:padding="20dp"
+                        android:gravity="center_vertical">
+                        <TextView android:layout_width="60dp" android:layout_height="60dp" android:text="📷" android:textSize="36sp" android:gravity="center" android:background="@drawable/icon_bg_white" />
+                        <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="vertical" android:layout_marginStart="20dp">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="实时相机识别" android:textSize="18sp" android:textStyle="bold" android:textColor="#0D47A1"/>
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="开启扫描，实时检测" android:textSize="13sp" android:textColor="#6488B5"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_main_video"
+                    android:layout_width="match_parent"
+                    android:layout_height="110dp"
+                    android:layout_marginBottom="16dp"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="3dp"
+                    android:foreground="?attr/selectableItemBackground">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:background="@drawable/item_gradient_orange"
+                        android:padding="20dp"
+                        android:gravity="center_vertical">
+                        <TextView android:layout_width="60dp" android:layout_height="60dp" android:text="🎥" android:textSize="36sp" android:gravity="center" android:background="@drawable/icon_bg_white" />
+                        <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="vertical" android:layout_marginStart="20dp">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="视频文件识别" android:textSize="18sp" android:textStyle="bold" android:textColor="#E65100"/>
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="分析本地视频内容" android:textSize="13sp" android:textColor="#B08B69"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_main_gallery"
+                    android:layout_width="match_parent"
+                    android:layout_height="110dp"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="3dp"
+                    android:foreground="?attr/selectableItemBackground">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:background="@drawable/item_gradient_purple"
+                        android:padding="20dp"
+                        android:gravity="center_vertical">
+                        <TextView android:layout_width="60dp" android:layout_height="60dp" android:text="🖼️" android:textSize="36sp" android:gravity="center" android:background="@drawable/icon_bg_white" />
+                        <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="vertical" android:layout_marginStart="20dp">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="选择相册图片" android:textSize="18sp" android:textStyle="bold" android:textColor="#4A148C"/>
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="选取已有照片进行识别" android:textSize="13sp" android:textColor="#8571A1"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+        </ScrollView>
+    </FrameLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        app:elevation="16dp"
+        app:itemIconTint="@drawable/nav_item_color_state"
+        app:itemTextColor="@drawable/nav_item_color_state"
+        app:itemRippleColor="#E8F5E9"
+        app:labelVisibilityMode="labeled"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:menu="@menu/bottom_nav_menu"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
