@@ -64,7 +64,7 @@ android.bundle.enableUncompressedNativeLibs=false
 ### 获取源码
 
 ```bash
-git clone [https://github.com/lijin6/weeddetectionapp.git](https://github.com/lijin6/weeddetectionapp.git)
+git clone https://github.com/lijin6/weeddetectionapp.git
 
 ```
 
