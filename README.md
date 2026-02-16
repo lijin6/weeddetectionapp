@@ -73,7 +73,4 @@ git clone https://github.com/lijin6/weeddetectionapp.git
 
 欢迎提交 Issue 或 Pull Request 来优化识别精度。
 
----
 
-### 💡 下一步建议
-由于你从 YOLO 转到了 TFLite，你可能需要处理 **元数据（Metadata）** 填充或者 **输入输出张量（Tensor）** 的预处理代码。
